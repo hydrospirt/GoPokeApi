@@ -30,5 +30,7 @@ go run main.go
 ```
 ### Примеры запросов:
 Добавление по id
-
+![alt text](https://github.com/hydrospirt/GoPokeApi/blob/master/screenshots/Add%20pokemon.png)
 Вывод всех добавленых Pokemon
+![alt text](https://github.com/hydrospirt/GoPokeApi/blob/master/screenshots/get_pokemon.png)
+
