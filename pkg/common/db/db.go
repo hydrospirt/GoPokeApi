@@ -14,7 +14,7 @@ func Init(url string) *gorm.DB {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	db.AutoMigrate(&models.Pokemon)
+	db.AutoMigrate(&models.Pokemon{})
 
 	return db
 }
