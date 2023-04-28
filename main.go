@@ -1,10 +1,9 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 	"github.com/hydrospirt/GoPokeApi/pkg/common/db"
+	"github.com/hydrospirt/GoPokeApi/pkg/pokemon"
 	"github.com/spf13/viper"
 )
 
@@ -16,12 +15,7 @@ func main() {
 	dbURL := viper.Get("DB_URL").(string)
 
 	r := gin.Default()
-	db.Init(dbURL)
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"port":  port,
-			"dbUrl": dbURL,
-		})
-	})
+	h := db.Init(dbURL)
+	pokemon.RegisterRoutes(r, h)
 	r.Run(port)
 }
