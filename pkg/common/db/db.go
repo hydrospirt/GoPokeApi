@@ -3,7 +3,7 @@ package db
 import (
 	"log"
 
-	"github.com/hydropsirt/GoPokeApi/pkg/common/models"
+	"github.com/hydrospirt/GoPokeApi/pkg/common/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
